@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - VIAJA LIBRE</title>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <div class="contenedor-logo">
+                    <a href="home.html" class="brand-info" style="text-decoration: none; color: inherit;">
+                        <h1>VIAJA LIBRE</h1>
+                        <p class="eslogan">¡Inicia sesión!</p>
+                    </a>
+                    <a href="home.html" class="texto-logo" style="text-decoration: none; color: white;">VL</a>
+                </div>
+            </div>
+            
+            <div class="selector-idioma">
+                <button id="lang-es" class="lang-btn active">ES</button>
+                <button id="lang-en" class="lang-btn">EN</button>
+                <button id="dyslexic-btn" class="lang-btn">00</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h2>INICIO DE SESIÓN</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">correo@gmail.com *</label>
+                    <input type="email" id="email" required>
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" required>
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        Recordar credenciales
+                    </label>
+                </div>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="faq.html">Preguntas frecuentes</a>
+            <a href="contacto.html" >Contacto</a>
+            <a href="documentacion.html">Documentación</a>
+        </div>
+    </footer>
+    <script src="script/login.js"></script>
+</body>
+</html>

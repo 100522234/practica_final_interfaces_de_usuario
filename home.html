@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - VIAJA LIBRE</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/global.css">
+</head>
+<body class="pagina-home">
+    <header>
+        <nav>
+            <div class="brand">
+                <div class="contenedor-logo">
+                    <div class="brand-info">
+                        <h1>VIAJA LIBRE</h1>
+                        <p class="eslogan">¡Bienvenido!</p>
+                    </div>
+                    <div class="texto-logo">VL</div>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="foro.html" class="nav-link">Foro</a>
+                <a href="otros_rincones.html" class="nav-link">Otros rincones</a>
+                <a href="login.html" class="nav-link" id="profileLink">Mi perfil</a>
+            </div>
+
+            <div class="selector-idioma">
+                <button id="lang-es" class="lang-btn active">ES</button>
+                <button id="lang-en" class="lang-btn">EN</button>
+                <button id="dyslexic-btn" class="lang-btn">00</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <!-- Contenedor izquierdo -->
+            <div class="contenedor-izquierda">
+                
+                <!-- Sección Experiencias -->
+                <div class="seccion-experiencias">
+                    <h2>Experiencias más económicas</h2>
+                  
+                    <div class="experiencias-grid">
+                        <div class="experiencia-tarjeta">
+                            <img src="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2luZ2Fwb3JlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Experiencia 1">
+                            <h4>Singapur</h4>
+                            <p class="precio">210€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Experiencia 2">
+                            <h4>Chefchaouen</h4>
+                            <p class="precio">290€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://plus.unsplash.com/premium_photo-1697730061063-ad499e343f26?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2l1ZGFkJTIwZGVsJTIwQ2Fib3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="Experiencia 3">
+                            <h4>Ciudad del Cabo</h4>
+                            <p class="precio">320€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9uZyUyMGtvbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Experiencia 4">
+                            <h4>Hong Kong</h4>
+                            <p class="precio">330€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SmFpcHVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Experiencia 5">
+                            <h4>Jaipur</h4>
+                            <p class="precio">330€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://plus.unsplash.com/premium_photo-1661929242720-140374d97c94?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpYW5nJTIwTWFpfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Experiencia 6">
+                            <h4>Chiang Mai</h4>
+                            <p class="precio">340€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZHJlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="Experiencia 7">
+                            <h4>Londres</h4>
+                            <p class="precio">340€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                        <div class="experiencia-tarjeta">
+                            <img src="https://plus.unsplash.com/premium_photo-1677344087971-91eee10dfeb1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3BvcnRvJTIwcG9ydHVnYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Experiencia 8">
+                            <h4>Oporto</h4>
+                            <p class="precio">350€</p>
+                            <button class="compartir-btn" onclick="compartirSinLogin(event)">Compartir</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Contenedor derecho -->
+            <div class="sidebar">
+                <!-- Botones de acción -->
+                <div class="action-buttons-container">
+                    <button class="action-btn" id="loginBtn">Iniciar sesión</button>
+                    <button class="action-btn" id="registerBtn">Registro</button>
+                </div>
+                
+                <div class="sidebar-section otros-rincones">
+                    <h3>Otros Rincones</h3>
+                    <button class="sidebar-btn" onclick="window.location.href='otros_rincones.html'">Ver más</button>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Temas de nuestro foro</h3>
+                    <div class="forum-topics" id="forumTopics" aria-live="polite"></div>
+                    <button class="sidebar-btn" onclick="window.location.href='foro.html'">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="faq.html">Preguntas frecuentes</a>
+            <a href="contacto.html" >Contacto</a>
+            <a href="documentacion.html">Documentación</a>
+        </div>
+    </footer>
+
+    <script src="script/home.js"></script>
+</body>
+</html>

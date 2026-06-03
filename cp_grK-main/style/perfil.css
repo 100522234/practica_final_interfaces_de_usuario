@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #6B8EF5;
+    font-size: 1.5rem;
+}
+
+.eslogan {
+    font-size: 14px;
+    color: black;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    background: #3F51B5;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-link {
+    color: #3F51B5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #C5E7F4;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.lang-btn.active {
+    background: #3F51B5;
+    color: white;
+}
+
+.accessibility-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.accessibility-btn.active {
+    background: #6B8EF5;
+    color: white;
+    border-color: #6B8EF5;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.seccion-datos,
+.seccion-reservas {
+    background: #C5E7F4;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.seccion-valoraciones {
+    background: #C5E7F4;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+    grid-column: 1 / -1;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.campo span:first-child {
+    font-weight: 600;
+}
+
+.campo span:last-child {
+    border-bottom: 2px solid #999;
+    padding: 0.5rem 0;
+}
+
+.reserva {
+    border-bottom: 2px solid #999;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.valoracion-item {
+    border-bottom: 2px solid #999;
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #3F51B5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* MODO DISLÉXICO */
+body.dyslexic {
+    font-family: 'Comic Sans MS', 'OpenDyslexic', Arial, sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    background: #FFFEF5;
+}
+
+body.dyslexic h1 {
+    font-weight: 600;
+    color: #2C5F8D;
+}
+
+body.dyslexic h2 {
+    font-weight: 600;
+    color: #2C5F8D;
+}
+
+body.dyslexic header {
+    background: #E8F4F8;
+}
+
+body.dyslexic .seccion-datos,
+body.dyslexic .seccion-reservas,
+body.dyslexic .seccion-valoraciones {
+    background: #FFF9E6;
+    border: 2px solid #FFD580;
+}
+
+body.dyslexic .lang-btn {
+    background: #E8F4F8;
+    border: 2px solid #C9B88C;
+}
+
+body.dyslexic .lang-btn.active {
+    background: #4A7BA7;
+    color: white;
+}
+
+body.dyslexic .accessibility-btn {
+    background: #E8F4F8;
+    border: 2px solid #C9B88C;
+}
+
+body.dyslexic .accessibility-btn.active {
+    background: #4A7BA7;
+    color: white;
+    border-color: #4A7BA7;
+}
+
+body.dyslexic .back-link {
+    color: #2C5F8D;
+    font-weight: 600;
+}
+
+body.dyslexic .footer-links a {
+    color: #2C5F8D;
+    font-weight: 600;
+}
+
+body.dyslexic .campo span:last-child,
+body.dyslexic .reserva {
+    border-bottom-color: #C9B88C;
+}
+
+body.dyslexic .valoracion-item {
+    border-bottom-color: #C9B88C;
+}
+
+body.dyslexic .logo-placeholder {
+    background: #4A7BA7;
+}
+
+@media (max-width: 768px) {
+    .perfil-container {
+        grid-template-columns: 1fr;
+    }
+}

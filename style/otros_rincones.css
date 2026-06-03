@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #6B8EF5;
+    font-size: 1.5rem;
+}
+
+.eslogan {
+    font-size: 14px;
+    color: black;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    background: #3F51B5;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-link {
+    color: #3F51B5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #C5E7F4;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.lang-btn.active {
+    background: #3F51B5;
+    color: white;
+}
+
+.accessibility-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.accessibility-btn.active {
+    background: #6B8EF5;
+    color: white;
+    border-color: #6B8EF5;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-wrapper {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.main-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.left-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* LISTA DE CIUDADES */
+.cities-container {
+    background: #C5E7F4;
+    border-radius: 12px;
+    padding: 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.city-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+}
+
+.city-row:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.city-row span::before {
+    content: "• ";
+}
+
+.details-btn {
+    padding: 0.4rem 1rem;
+    background: #3F51B5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.details-btn:hover {
+    background: #3F51B5;
+}
+
+/* FILTROS */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 200px;
+    align-self: flex-start;
+    margin-top: 2rem;
+}
+
+.filter-group {
+    background: #C5E7F4;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.filter-group select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    background: white;
+}
+
+/*ESTRELLAS*/
+#modal-rating {
+    color: #3F51B5;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    margin: 15rem 0 0 0;
+}
+#modal-rating span {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 0.25rem;
+}
+
+/* Ajustes para tablet */
+@media (max-width: 768px) {
+    #modal-rating {
+        margin-top: 15rem;
+    }
+    #modal-rating span {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ajustes para móvil */
+@media (max-width: 480px) {
+    #modal-rating {
+        margin-top: 11rem;
+    }
+    #modal-rating span {
+        font-size: 1.5rem;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-links a {
+    color: #3F51B5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* MODO DISLÉXICO */
+body.dyslexic {
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    background: #FFFEF5;
+}
+
+body.dyslexic .content-wrapper {
+    background: #FFF9E6;
+}
+
+body.dyslexic .cities-container,
+body.dyslexic .filter-group {
+    background: #FFE4B5;
+}
+
+body.dyslexic .details-btn {
+    background: #4A7BA7;
+}
+
+body.dyslexic .texto-logo {
+    background: #4A7BA7;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    
+    .filters {
+        flex-direction: row;
+        min-width: auto;
+        margin-top: 0;
+    }
+    
+    .filter-group {
+        flex: 1;
+    }
+    
+    .cities-container {
+        max-height: 60vh;
+    }
+    
+    .city-row {
+        grid-template-columns: 1fr 1fr 1fr auto;
+        font-size: 0.9rem;
+    }
+}
+
+/* MODAL DE DETALLES */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.modal-close:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+#modal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+#modal-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 1.5rem 0.5rem;
+}
+
+#modal-country {
+    color: #3F51B5;
+    font-weight: 600;
+    margin: 0 1.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+#modal-description {
+    color: #555;
+    line-height: 1.7;
+    margin: 0 1.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* BOTÓN DE COMPRA EN EL MODAL */
+.modal-buy-btn {
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem 1.5rem;
+    padding: 1rem;
+    background: #3F51B5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-buy-btn:hover {
+    background: #8A6DD9;
+    transform: translateY(-2px);
+}
+
+.modal-buy-btn:active {
+    transform: translateY(0);
+}
+
+/* Modo disléxico para modal */
+body.dyslexic .modal-content {
+    background: #FFF9E6;
+}
+
+body.dyslexic #modal-country {
+    color: #4A7BA7;
+}
+
+body.dyslexic .modal-buy-btn {
+    background: #4A7BA7;
+}
+
+body.dyslexic .modal-buy-btn:hover {
+    background: #2C5F8D;
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .brand-block,
+    .section-pill,
+    .header-right {
+        width: 100%;
+    }
+    
+    .section-pill {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .brand-title {
+        font-size: 1rem;
+    }
+    
+    .back-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .main-layout {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    
+    .cities-container {
+        max-height: 55vh;
+    }
+    
+    .city-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .city-row:not(:last-child) {
+        border-bottom: none;
+    }
+    
+    .details-btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    /* Modal responsive móvil */
+    .modal-content {
+        max-width: 95%;
+        margin: 0.5rem;
+    }
+    
+    #modal-image {
+        height: 180px;
+    }
+    
+    #modal-title {
+        font-size: 1.25rem;
+        margin: 0.75rem 1rem 0.5rem;
+    }
+    
+    #modal-country {
+        margin: 0 1rem 0.75rem;
+    }
+    
+    #modal-description {
+        margin: 0 1rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .modal-buy-btn {
+        width: calc(100% - 2rem);
+        margin: 0 1rem 1rem;
+    }
+}

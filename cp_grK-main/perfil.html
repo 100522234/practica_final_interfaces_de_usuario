@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - VIAJA LIBRE</title>
+    <link rel="stylesheet" href="style/perfil.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedor-logo">
+                <a href="home_log.html" class="brand" style="text-decoration: none; color: inherit;">
+                    <h1>VIAJA LIBRE</h1>
+                    <p class="eslogan" id="welcome-message">¡Bienvenido!</p>
+                </a>
+                <a href="home_log.html" class="logo-placeholder" style="text-decoration: none; color: white;">VL</a>
+            </div>
+            <div class="header-right">
+                <a href="home_log.html" class="back-link">Volver</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" id="lang-es">ES</button>
+                    <button class="lang-btn" id="lang-en">EN</button>
+                </div>
+                <button class="accessibility-btn" id="colorblind-btn" onclick="toggleColorblind()" title="Modo Daltónico">OO</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="perfil-container">
+            <div class="seccion-datos">
+                <h2>Datos usuario</h2>
+                <div class="campo">
+                    <span>Nombre:</span>
+                    <span id="user-firstname">_____________</span>
+                </div>
+                <div class="campo">
+                    <span>Apellidos:</span>
+                    <span id="user-lastname">_____________</span>
+                </div>
+                <div class="campo">
+                    <span>Dirección de correo:</span>
+                    <span id="user-email">_____________</span>
+                </div>
+            </div>
+
+            <div class="seccion-reservas">
+                <h2>Mis reservas</h2>
+                <div class="reserva">1. _____________</div>
+                <div class="reserva">2. _____________</div>
+                <div class="reserva">3. _____________</div>
+                <div class="reserva">n. _____________</div>
+            </div>
+            <div class="seccion-valoraciones">
+                <h2>Experiencias que has valorado</h2>
+                <div id="lista-valoraciones"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="faq_log.html">Preguntas frecuentes</a>
+            <a href="contacto_log.html" >Contacto</a>
+            <a href="documentacion_log.html">Documentación</a>
+        </div>
+    </footer>
+
+    <script src="script/perfil.js"></script>
+</body>
+</html>

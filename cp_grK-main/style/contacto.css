@@ -1,0 +1,334 @@
+*, *::before, *::after {
+    box-sizing: border-box; /* Fundamental para que width: 100% no se desborde con padding */
+}
+
+/* Estilos de la navegación (Base) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/*HEADER*/
+.brand {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    padding-left: 0;
+    padding-top: 10px;
+    display: flex; 
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left; 
+    
+}
+
+.brand h1 {
+    color: #3F51B5;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.brand-info {
+    text-align: left;
+}
+
+.eslogan {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; 
+    color: black; 
+    font-weight: 300;
+    margin-top: 5px; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    background: #3F51B5;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/**/
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.support-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-button {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3F51B5;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-button:hover, .nav-button.active {
+    color: #3F51B5;
+    border-bottom: 3px solid #3F51B5;
+}
+
+/* --- Estilos Específicos de la Página Contacto --- */
+.contact-layout {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* El formulario ocupa 2/3 y la info 1/3 */
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos del Formulario */
+.contact-form-area h2 {
+    color: #3F51B5;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #3F51B5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #3F51B5;
+}
+
+/* Estilos de la Información Directa */
+.contact-info-area h2 {
+    color: #333;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h3 {
+    font-size: 1.1rem;
+    color: #3F51B5;
+    margin-bottom: 5px;
+}
+
+.info-block p {
+    margin: 0;
+    color: #555;
+}
+
+.schedule {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.map-placeholder .map {
+    height: 150px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+
+/* 1. Teléfonos (max-width: 600px) */
+@media (max-width: 600px) {
+    /* BODY */
+    body {
+        padding-top: 100px; /* Reducimos el padding superior para móviles */
+    }
+
+    /* HEADER AJUSTES */
+    .brand {
+        padding: 0.5rem 10px;
+        padding-top: 10px;
+    }
+    .brand h1 {
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+    .logo-text {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .main-header {
+        top: 60px; /* Ajustamos la posición de la navegación */
+        padding: 10px;
+    }
+    .support-nav ul {
+        gap: 15px; /* Reducir el espacio entre botones */
+        flex-wrap: wrap; /* Permitir que los botones envuelvan si es necesario */
+        justify-content: center;
+    }
+    .nav-button {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    /* CONTENIDO PRINCIPAL AJUSTES */
+    .contact-layout {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    /* GRID AJUSTES (De 2 columnas a 1: apilamiento) */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .contact-form-area h2, .contact-info-area h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-block {
+        margin-bottom: 20px;
+    }
+
+    .submit-button {
+        width: 100%; /* Botón de ancho completo */
+        padding: 10px 0;
+    }
+}
+
+/* 2. Tablets (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    /* BODY */
+    body {
+        padding-top: 110px;
+    }
+    /* HEADER AJUSTES */
+    .brand {
+        padding: 1rem 1.5rem;
+        padding-top: 10px;
+    }
+    .brand h1 {
+        padding-left: 20px;
+    }
+    .main-header {
+        top: 70px;
+        padding: 10px 20px;
+    }
+    .support-nav ul {
+        gap: 20px;
+    }
+
+    /* CONTENIDO PRINCIPAL AJUSTES */
+    .contact-layout {
+        max-width: 740px; /* Ajustar el max-width para tablet */
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    /* GRID AJUSTES - Mantenemos 2 columnas pero ajustamos el espaciado */
+    .contact-grid {
+        grid-template-columns: 2fr 1fr; 
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .contact-form-area h2, .contact-info-area h2 {
+        font-size: 1.4rem;
+    }
+}
